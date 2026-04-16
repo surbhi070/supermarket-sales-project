@@ -1,28 +1,31 @@
-# Supermarket Sales Analytics
+📊 KPIs Defined
+- Total Revenue = SUM(Sales)
+- Total Profit = SUM(Profit)
+- Profit Margin = Profit / Sales
+- Average Order Value = Sales / Number of Orders
+- Sales by Payment Method
 
-## 📊 Project Overview
-This project showcases a **data-driven analysis of supermarket sales** using **MySQL**, **Excel Pivot Tables**, and **Dashboards**.
 
-**Objective:**  
-To derive actionable insights for business growth by analyzing key sales metrics.
+✅ MYSQL QUERIES
+-Total Revenue
+SELECT SUM(sales) FROM orders;
 
-## 🛠 Tools Used
-- MySQL (for querying and data extraction)
-- Excel (for Pivot Table summarization and Dashboard creation)
+-Profit Margin
+SELECT SUM(profit)/SUM(sales)*100 FROM orders;
 
-## 📈 Key Highlights
-- Identified **top-performing product lines** and **branches**.
-- Analyzed **payment methods** and **customer types**.
-- Discovered **sales trends** over time and **optimal business strategies**.
+-Sales by Branch
+SELECT branch, SUM(sales)
+FROM orders
+GROUP BY branch;
 
-## 📂 Project Files
-- **mysql proj.pptx** – Presentation containing the complete project analysis, dashboards, and business recommendations.
 
-## 🔮 Future Scope
-- Deep-dive analysis into customer loyalty and retention.
-- Predictive modeling for demand forecasting.
+💡 Key Insights
+- Branch A generates highest revenue but lower profit margin
+- Cash payments dominate overall transactions
+- Certain product categories show consistent high demand.
 
-## 🙏 Acknowledgment
-Thank you for visiting my project!
 
----
+✅ “Business Recommendations”
+- Improve pricing strategy in low-margin branches
+- Promote digital payments for better tracking
+- Focus inventory on high-demand product lines.
